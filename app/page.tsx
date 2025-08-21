@@ -61,10 +61,8 @@ export default function Home() {
             <SummaryCards />
 
             {/* Charts and Goals Section */}
-            <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
-              <div className="xl:col-span-2">
-                <ExpenseChart />
-              </div>
+            <div className="grid grid-cols-1 gap-6">
+              <ExpenseChart />
               <div className="space-y-6">
                 <GoalsProgress />
                 <QuickActions onPageChange={setCurrentPage} />
@@ -191,7 +189,9 @@ export default function Home() {
 
   return (
     <AppLayout currentPage={currentPage} onPageChange={setCurrentPage}>
-      {renderPage()}
+      <div key={currentPage}> {/* Add this wrapper div with key */}
+        {renderPage()}
+      </div>
     </AppLayout>
   )
 }

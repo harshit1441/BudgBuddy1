@@ -5,7 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Produscope - Student Expense Manager",
+  title: "BudgBuddy - Student Expense Manager",
   description: "Smart expense management platform for students",
   generator: "v0.app",
 }
